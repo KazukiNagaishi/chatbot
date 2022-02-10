@@ -1,1 +1,1 @@
-web: python app_parrot.py
+web: python .py
