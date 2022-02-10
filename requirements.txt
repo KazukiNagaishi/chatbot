@@ -1,4 +1,4 @@
 Flask==2.0.2
 line-bot-sdk==2.1.0
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe
 transformers
