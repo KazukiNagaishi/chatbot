@@ -2,13 +2,6 @@ from transformers import BertJapaneseTokenizer, BertModel
 from sklearn.metrics.pairwise import cosine_similarity
 import torch
 
-# 学習済みBERTモデルを読込
-tokenizer = BertJapaneseTokenizer \
-    .from_pretrained('cl-tohoku/bert-base-japanese-whole-word-masking')
-model_bert = BertModel \
-    .from_pretrained('cl-tohoku/bert-base-japanese-whole-word-masking')
-
-
 # 埋込み表現を計算
 def calc_embedding(text):
     bert_tokens = tokenizer.tokenize(text)
