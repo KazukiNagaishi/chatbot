@@ -1,0 +1,6 @@
+Flask==2.0.2
+line-bot-sdk==2.1.0
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.8.0+cpu;
+numpy==1.19.2
+transformers
