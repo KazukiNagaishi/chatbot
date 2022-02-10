@@ -21,6 +21,12 @@ LINE_CHANNEL_SECRET = os.environ["LINE_CHANNEL_SECRET"]
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
+# 学習済みBERTモデルを読込
+tokenizer = BertJapaneseTokenizer \
+    .from_pretrained('cl-tohoku/bert-base-japanese-whole-word-masking')
+model_bert = BertModel \
+    .from_pretrained('cl-tohoku/bert-base-japanese-whole-word-masking')
+
 @app.route("/")
 def hello_world():
     return "hello chatbot!"
